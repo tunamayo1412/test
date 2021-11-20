@@ -1,0 +1,45 @@
+body{margin:0;line-height:2;font-size:16px;font-family:"Noto Sans CJK JP",sans-serif;}
+
+header{display:flex;position:sticky;top:0;z-index:99;color:#FFF;background:#333;box-shadow:0 8px 8px #999;}
+main{max-width:1000px;margin:0 auto;}
+footer{margin:0 1em;text-align:center;color:#333;border-top:1px solid #CCC;}
+
+section{margin:2em 2em 8em;text-align:center;}
+h2{max-width:300px;margin:4em auto 2em;text-align:center;font-size:1.5em;font-weight:300;letter-spacing:0.1em;border-bottom:1px solid #66F;}
+h2[id]::before{display:block;height:8em;margin-top:-8em;content:"";}
+h3{margin:3em auto 1em;font-size:1.25em;font-weight:bold;}
+
+h1{flex:1 1 500px;margin:0;padding:0.5em 1em;font-size:2em;font-weight:bold;}
+#header_nav{flex:0 4 400px;display:flex;align-items:stretch;margin:0;padding:0;list-style:none;}
+#header_nav li{flex:1 1 0;display:table;width:1fr;height:100%;text-align:center;white-space:nowrap;}
+#header_nav a{display:table-cell;padding:0.5em;vertical-align:middle;color:unset;text-decoration:none;transition:all 0.2s;}
+#header_nav a:hover{background:#666;transition:all 0.2s;}
+#header_nav a::after{display:block;height:0;margin:0.1em 0.5em 0;border-top:1px solid #FFF;content:"";transform:scale(0,1);filter:opacity(0%);transition:filter 0.2s,transform 0s 0.2s;}
+#header_nav a:hover::after{transform:scale(1,1);filter:opacity(100%);transition:filter 0s,transform 0.2s;}
+
+.linkcard{margin:16px auto;max-width:480px;}
+.linkcard a{display:block;color:unset;text-decoration:unset;border:1px solid #999;border-radius:8px;overflow:hidden;box-shadow:4px 4px 8px #CCC;}
+.linkcard a:hover{filter:brightness(0.95);}
+.linkcard_image{display:block;width:100%;}
+.linkcard_caption{margin:0;padding:16px;text-align:center;font-weight:bold;border-top:1px solid #CCC;}
+
+.illust_wrapper{display:grid;grid-template-columns:repeat(3,1fr);grid-gap:2%;align-items:start;margin:16px auto;}
+.illust_img{display:block;width:100%;}
+.click_zoom{text-align:right;color:#666;}
+
+.github_logo{margin:16px auto;}
+.github_logo img{width:100%;max-width:100px;}
+.github_logo p{margin:0;color:#333;}
+
+@media screen and ( max-width:800px ) {
+	h1{font-size:1.5em;}
+	h2{margin-top:2em;}
+	h2[id]::before{height:170.6px;margin-top:-170.6px;}
+	header{flex-wrap:wrap;}
+	#header_nav{flex:1 1 400px;}
+}
+
+@media screen and ( max-width:400px ) {
+	h1{font-size:1.2em;}
+	h2[id]::before{height:156.2px;margin-top:-156.2px;}
+}
